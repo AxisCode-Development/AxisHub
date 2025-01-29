@@ -1,0 +1,27 @@
+# AxisHub Configuration
+
+# Enable or disable analytics
+enableAnalytics: true
+
+# Multiple hubs for load balancing
+hubs:
+  - "hub1"
+  - "hub2"
+
+# Require permission "axishub.command" for /hub
+requiresPermission: false
+
+# Servers where /hub is disabled
+disabled-servers: []
+
+# Cooldown (seconds) before using /hub again
+cooldownDurationSeconds: 5
+
+# Messages
+alreadyInHub: "&cYou are already connected to this server!"
+disabledServersError: "&cYou can't do /hub here!"
+hubDoesNotExistMessage: "&cThe configured hub server (%server%) doesn't exist!"
+sendingToHubMessage: "&aSending you to the hub: %server%"
+reloadCompleteMessage: "&aConfiguration reloaded." # "axishub.reload" permission required.
+reloadNoPermissionMessage: "&cYou don't have permission to reload this plugin!"
+cooldownActiveMessage: "&cYou must wait %cooldown% seconds before using /hub again."
