@@ -1,9 +1,11 @@
 package dev.axiscode.axisHub
 
+import jdk.internal.platform.Metrics
+import net.md_5.bungee.api.connection.ProxiedPlayer
 import net.md_5.bungee.api.plugin.Plugin
 import net.md_5.bungee.api.plugin.PluginManager
-import net.md_5.bungee.api.connection.ProxiedPlayer
 import java.util.logging.Level
+
 
 class AxisHub : Plugin() {
 
@@ -71,4 +73,5 @@ class AxisHub : Plugin() {
         val end = cooldownManager.cooldowns[player.uniqueId] ?: 0
         return if (end > now) (end - now) / 1000 else 0
     }
+
 }
